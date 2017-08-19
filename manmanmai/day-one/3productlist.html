@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/2index.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/3index.css">
+</head>
+<body>
+<!--header start-->
+<header id='header'>
+    <a href="#" id='logo-left'><img src="images/header_logo.png" alt="" id='img-l'></a>
+    <a href="#" id='app-right'><img src="images/header_app.png" alt="" id='img-r'></a>
+</header>
+<!--header end-->
+
+<!--search start-->
+<section id='search'>
+    <div class='searchBox'>
+        <input type="text" placeholder='慢慢买' id='search1'>
+        <input type="button" value='搜索' id='btn'>
+    </div>
+</section>
+<!--search end-->
+
+
+<!--product start-->
+<section id='productBox'>
+    <div id='productNav'>
+        <a href="./manindex.html">首页></a>
+        <a href="./2manidnex.html">分类商品></a>
+        <span id='userName'></span>
+        <button>搜索</button>
+    </div>
+    <div id='productContent'>
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="http://www.zuyushop.com:8013/ProPic/201612/Thumb/Thumb_2016120016544872739.jpg" alt="">
+                </a>
+            </div>
+            <div class='miaoshu'>
+                <p>夏普(SHARP) LCD-70SU665A 70英寸 4K超高清智能液晶电视 </p>
+
+                <p>￥6499</p>
+
+                <p><span>10商城报价</span><span>有人评论3066条</span></p>
+
+            </div>
+        </div>
+    </div>
+    <div id='productPage'>
+        <div class='pagelist'><button id="btnPre">上一页</button></div>
+        <div class='pagelist'>
+            <select name="productListSelect" id="productListSelect">
+                <option value="1">1</option>
+            </select>
+        </div>
+        <div class='pagelist'><button id="btnNext">下一页</button></div>
+    </div>
+</section>
+<!--product end-->
+
+
+
+
+<!--denglu start-->
+<section id='threeBox'>
+    <a href="#" id='dl'>登录</a>
+    <a href="#" id='zc'>注册</a>
+    <a href="#" id='fh'>
+        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="" width='15' height='15' id='img-top'>
+        返回底部</a>
+</section>
+<!--denglu end-->
+
+
+
+
+
+<!--footer start-->
+<footer id='foot'>
+    <p><a href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a><a href="http://m.manmanbuy.com"_hover-ignore="1">慢慢买手机版-- 掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--footer end-->
+
+<!--分类产品模板-->
+<script type='text/html' id='categoryId'>
+    {{each data as value index}}
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                {{#value.productImg}}
+            </a>
+        </div>
+        <div class='miaoshu'>
+            <p>{{value.productName}}</p>
+
+            <p>{{value.productPrice}}</p>
+
+            <p><span>商城{{value.productQuote}}</span><span>有人{{value.productCom}}</span></p>
+
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script src='./lib/jquery/jquery.js'></script>
+<script src='./js/template.js'></script>
+<script src='./js/3index.js'></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+#productBox #productNav {
+  height: 40px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 0 10px;
+}
+#productBox #productNav a,
+#productBox #productNav span {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 14px;
+  color: #000;
+}
+#productBox #productNav button {
+  width: 50px;
+  height: 30px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  float: right;
+  border: none;
+  margin-top: 5px;
+}
+#productBox #productContent .miaoshu p:nth-child(2) {
+  color: red;
+}
+#productBox #productContent .miaoshu p:nth-child(3) > span {
+  color: #a1a1a1;
+}
+#productBox #productContent .miaoshu p:nth-child(3) > span:nth-child(2) {
+  float: right;
+}
+#productBox #productPage {
+  width: 100%;
+  height: 60px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #a1a1a1;
+  display: flex;
+  padding-left: 50px;
+}
+#productBox #productPage .pagelist {
+  flex: 1;
+  margin-top: 20px;
+}
+#productBox #productPage .pagelist * {
+  height: 34px;
+  width: 82px;
+}
+#productBox #productPage .pagelist #btnPre,
+#productBox #productPage .pagelist #btnNext {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}

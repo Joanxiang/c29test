@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+<body>
+<!--header start-->
+<header id='header'>
+    <a href="#" id='logo-left'><img src="images/header_logo.png" alt="" id='img-l'></a>
+    <a href="#" id='app-right'><img src="images/header_app.png" alt="" id='img-r'></a>
+</header>
+<!--header end-->
+
+<!--search start-->
+<section id='search'>
+    <div class='searchBox'>
+        <input type="text" placeholder='慢慢买' id='search1'>
+        <input type="button" value='搜索' id='btn'>
+    </div>
+</section>
+<!--search end-->
+
+<!--menu start-->
+<section id='menuBox'>
+    <div class='row'>
+        <div class='item col-xs-3'>
+            <a href="2manindex.html" id='menu-out'>
+                <img src="images/ic_search.png" alt="" id='menu-img'>
+                <p id='letter'>比价搜索</p>
+            </a>
+        </div>
+
+</section>
+<!--menu end-->
+
+<!--zhekou  start-->
+<section id='zheBox'>
+    <span id='zhe-leter'>超值折扣推介</span>
+    <img src="http://www.zuyushop.com/wap/images/more.png" width='20' height='20' alt="" id='zhe-img'>
+</section>
+<!--zhekou  end-->
+
+<!--product start-->
+<div class="media">
+    <div class="media-left">
+        <a href="#">
+            <img class="media-object" src="http://wnzk-img.zuyushop.com/r_img/img/20170815/06/cdfa96087df44901bc9b6803fb409199.jpg" alt="">
+        </a>
+    </div>
+    <div class='miaoshu'>
+        <p>VERSACE COLLECTION 范思哲 V91223S VM00046 V239 100 男士件 皮带 *3 <span id="red">1090元包邮（立减）</span></p>
+
+        <p>
+            <span id='xia'>京东商城 | 08-15 13:14</span>
+            <span class='glyphicon glyphicon-envelope' id="sr">0</span>
+        </p>
+
+    </div>
+</div>
+
+<!--product end-->
+
+<!--more start-->
+<div id='moreBig'>
+    <a href="#" id=moreBox>更多优惠信息>></a>
+</div>
+<!--more end-->
+<!--pinpai start-->
+<section id='pinBox'>
+    <span id='pin-leter'>品牌排行</span>
+    <img src="http://www.zuyushop.com/wap/images/more.png" width='20' height='20' alt="" id='pin-img'>
+</section>
+<!--pinpai end-->
+
+<!--denglu start-->
+<section id='threeBox'>
+    <a href="#" id='dl'>登录</a>
+    <a href="#" id='zc'>注册</a>
+    <a href="#" id='fh'>
+        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="" width='15' height='15' id='img-top'>
+        返回底部</a>
+</section>
+<!--denglu end-->
+
+<!--footer start-->
+<footer id='foot'>
+    <p><a href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a><a href="http://m.manmanbuy.com"_hover-ignore="1">慢慢买手机版-- 掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--footer end-->
+
+<!--菜单模板-->
+<script type='text/html' id='indexmenu'>
+{{each result as value index}}
+<div class='item col-xs-3'>
+    <a href="2manidnex.html" id='menu-out'>
+        {{#value.img}}
+        <p id='letter'>{{value.name}}</p>
+    </a>
+</div>
+{{/each}}
+</script>
+
+<!--商品模板-->
+<script type='text/html' id='indexProduct'>
+{{each result as value index}}
+<div class="p">
+    <div class="media-left">
+        <a href="#">
+            {{#value.productImgSm}}
+        </a>
+    </div>
+    <div class='miaoshu'>
+        <p>{{value.productName}}<span id="red">{{value.productPinkage}}</span></p>
+
+        <p>
+            <span id='xia'>{{value.productFrom}} | {{value.productTime}}</span>
+            <span class='glyphicon glyphicon-envelope' id="sr">{{value.productComCount}}</span>
+        </p>
+
+    </div>
+</div>
+{{/each}}
+</script>
+
+<script src='lib/jquery/jquery.js'></script>
+<script src='js/template.js'></script>
+<script src='js/index.js'></script>
+</body>
+</html>

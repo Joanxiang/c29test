@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/2index.css">
+</head>
+<body>
+<!--header start-->
+<header id='header'>
+    <a href="#" id='logo-left'><img src="images/header_logo.png" alt="" id='img-l'></a>
+    <a href="#" id='app-right'><img src="images/header_app.png" alt="" id='img-r'></a>
+</header>
+<!--header end-->
+
+<!--search start-->
+<section id='search'>
+    <div class='searchBox'>
+        <input type="text" placeholder='慢慢买' id='search1'>
+        <input type="button" value='搜索' id='btn'>
+    </div>
+</section>
+<!--search end-->
+
+<!--category start-->
+<section id='category'>
+<ul id='cg'>
+    <li class='categoryTitle categoryTitle0' title='0'><a href="">大家电</a></li>
+    <div class='categoryList categoryList0 row'>
+        <div class='content col-xs-4'><a href="#">电视</a></div>
+        <div class='content col-xs-4'><a href="#">电视</a></div>
+        <div class='content col-xs-4'><a href="#">电视</a></div>
+        <div class='content col-xs-4'><a href="#">电视</a></div>
+        <div class='content col-xs-4'><a href="#">电视</a></div>
+        <div class='content col-xs-4'><a href="#">电视</a></div>
+    </div>
+    <li class='categoryTitle categoryTitle1'><a href="#">大家电</a></li>
+    <div class='categoryList categoryList1 row'></div>
+    <li class='categoryTitle categoryTitle2'><a href="#">大家电</a></li>
+    <div class='categoryList categoryList2 row'></div>
+    <li class='categoryTitle categoryTitle3'><a href="#">大家电</a></li>
+    <div class='categoryList categoryList3 row'></div>
+    <li class='categoryTitle categoryTitle4'><a href="#">大家电</a></li>
+    <div class='categoryList categoryList4 row'></div>
+</ul>
+</section>
+<!--category end-->
+<!--denglu start-->
+<section id='threeBox'>
+    <a href="#" id='dl'>登录</a>
+    <a href="#" id='zc'>注册</a>
+    <a href="#" id='fh'>
+        <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="" width='15' height='15' id='img-top'>
+        返回底部</a>
+</section>
+<!--denglu end-->
+
+<!--footer start-->
+<footer id='foot'>
+    <p><a href="http://m.manmanbuy.com/app.html?type=footword&value=wap">手机APP下载</a><a href="http://m.manmanbuy.com"_hover-ignore="1">慢慢买手机版-- 掌上比价平台</a></p>
+    <p>m.manmanbuy.com</p>
+</footer>
+<!--footer end-->
+
+<!--分类商品表头模板-->
+<script type='text/html' id='categoryIP'>
+    {{each data as value index}}
+        <li class='categoryTitle categoryTitle{{value.titleId}}' title='{{value.titleId}}'><a href="">{{value.title}}</a></li>
+        <div class='categoryList categoryList{{value.titleId}} row'></div>
+
+    {{/each}}
+</script>
+
+
+<!--分类商品内容模板-->
+
+<script type='text/html' id='categoryContentIp'>
+    {{each data as value index}}
+    <div class='content col-xs-4' categoryId='{{value.categoryId}}'><a href="3productlist.html?category={{value.category}}&categoryId={{value.categoryId}}">{{value.category}}</a></div>
+    {{/each}}
+</script>
+<script src='lib/jquery/jquery.js'></script>
+<script src='js/template.js'></script>
+<script src='./js/2index.js'></script>
+</body>
+</html>
